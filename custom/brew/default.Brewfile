@@ -16,7 +16,12 @@ brew "git"        # Git version control
 # Shell enhancements  
 brew "starship"   # Cross-shell prompt
 brew "zoxide"     # Smarter cd command
+brew "atuin"      # Smarter shell command history
 
 # Utilities
-brew "htop"       # Interactive process viewer
+brew "btop"       # Interactive process viewer
 brew "tmux"       # Terminal multiplexer
+
+# CLI Email Tools
+brew "aerc"      # CLI email client
+brew "khard"     # CLI contact management
