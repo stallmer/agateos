@@ -8,7 +8,7 @@
 #   - Justfile: export image_name := env("IMAGE_NAME", "your-name-here")
 #   - README.md: # your-name-here (title)
 #   - artifacthub-repo.yml: repositoryID: your-name-here
-#   - custom/ujust/README.md: localhost/your-name-here:stable (in bootc switch example)
+#   - custom/ujust/README.md: localhost/your-repo-name:stable (in bootc switch example)
 #
 # The project name defined here is the single source of truth for your
 # custom image's identity. When changing it, update all references above
@@ -27,6 +27,7 @@
 #    - @ublue-os/brew - Homebrew integration
 #
 # 2. Base Image Options:
+#    - `ghcr.io/projectbluefin/bluefin-main:latest` (Fedora with Bluefin desktop)
 #    - `ghcr.io/ublue-os/silverblue-main:latest` (Fedora and GNOME)
 #    - `ghcr.io/ublue-os/base-main:latest` (Fedora and no desktop 
 #    - `quay.io/centos-bootc/centos-bootc:stream10 (CentOS-based)` 
@@ -44,8 +45,11 @@ COPY custom /custom
 COPY --from=ghcr.io/projectbluefin/common:latest@sha256:b8fe93b16674a547b4cf38493af19caa484d9575956fc3be04ca3d10faec23ff /system_files /oci/common
 COPY --from=ghcr.io/ublue-os/brew:latest@sha256:2eca44f5b4b58b8271a625d61c2c063b7c8776f68d004ae67563e2a79450be9c /system_files /oci/brew
 
-# Base Image - GNOME included
-FROM ghcr.io/ublue-os/silverblue-main:latest@sha256:3c0755853e3bd1a7ffe60851bb85a4782c91442566ca7e2aa59f64b496fb4a5d
+# Base Image - Bluefin (includes GNOME with Bluefin desktop configuration)
+FROM ghcr.io/projectbluefin/bluefin-main:latest
+
+# Base Image - GNOME included (Silverblue - pure Fedora)
+# FROM ghcr.io/ublue-os/silverblue-main:latest@sha256:3c0755853e3bd1a7ffe60851bb85a4782c91442566ca7e2aa59f64b496fb4a5d
 
 # Base Image - Bazzite GNOME flavor
 # FROM ghcr.io/ublue-os/bazzite-gnome:stable
