@@ -50,6 +50,8 @@ COPY --from=ghcr.io/ublue-os/brew:latest@sha256:2eca44f5b4b58b8271a625d61c2c063b
 # Base Image - Bazzite GNOME flavor
 # FROM ghcr.io/ublue-os/bazzite-gnome:stable
 
+FROM ghcr.io/projectbluefin/common:latest AS bluefin-common
+
 ## Alternative base images, no desktop included (uncomment to use):
 FROM ghcr.io/ublue-os/base-main:latest    
 # FROM quay.io/centos-bootc/centos-bootc:stream10
@@ -57,7 +59,6 @@ FROM ghcr.io/ublue-os/base-main:latest
 ## Alternative GNOME OS base image (uncomment to use):
 # FROM quay.io/gnome_infrastructure/gnome-build-meta:gnomeos-nightly
 
-FROM ghcr.io/projectbluefin/common:latest AS bluefin-common
 COPY --from=bluefin-common /system_files /
 
 ### /opt
