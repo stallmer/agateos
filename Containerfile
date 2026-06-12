@@ -57,6 +57,9 @@ FROM ghcr.io/ublue-os/base-main:latest
 ## Alternative GNOME OS base image (uncomment to use):
 # FROM quay.io/gnome_infrastructure/gnome-build-meta:gnomeos-nightly
 
+FROM ghcr.io/projectbluefin/common:latest AS bluefin-common
+COPY --from=bluefin-common /system_files /
+
 ### /opt
 ## Some bootable images, like Fedora, have /opt symlinked to /var/opt, in order to
 ## make it mutable/writable for users. However, some packages write files to this directory,
