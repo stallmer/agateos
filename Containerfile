@@ -45,13 +45,13 @@ COPY --from=ghcr.io/projectbluefin/common:latest@sha256:b8fe93b16674a547b4cf3849
 COPY --from=ghcr.io/ublue-os/brew:latest@sha256:2eca44f5b4b58b8271a625d61c2c063b7c8776f68d004ae67563e2a79450be9c /system_files /oci/brew
 
 # Base Image - GNOME included
-FROM ghcr.io/ublue-os/silverblue-main:latest@sha256:3c0755853e3bd1a7ffe60851bb85a4782c91442566ca7e2aa59f64b496fb4a5d
+# FROM ghcr.io/ublue-os/silverblue-main:latest@sha256:3c0755853e3bd1a7ffe60851bb85a4782c91442566ca7e2aa59f64b496fb4a5d
 
 # Base Image - Bazzite GNOME flavor
 # FROM ghcr.io/ublue-os/bazzite-gnome:stable
 
 ## Alternative base images, no desktop included (uncomment to use):
-# FROM ghcr.io/ublue-os/base-main:latest    
+FROM ghcr.io/ublue-os/base-main:latest    
 # FROM quay.io/centos-bootc/centos-bootc:stream10
 
 ## Alternative GNOME OS base image (uncomment to use):
