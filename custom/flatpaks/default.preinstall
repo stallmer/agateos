@@ -7,9 +7,6 @@
 [Flatpak Preinstall org.mozilla.firefox]
 Branch=stable
 
-[Flatpak Preinstall org.mozilla.Thunderbird]
-Branch=stable
-
 # GNOME Core Applications
 [Flatpak Preinstall org.gnome.Calculator]
 Branch=stable
@@ -72,10 +69,10 @@ Branch=stable
 [Flatpak Preinstall com.github.PintaProject.Pinta]
 Branch=stable
 
-[Flatpak Preinstall com.github.rafostar.Clapper]
+# System Utilities
+[Flatpak Preinstall it.mijorus.gearlever]
 Branch=stable
 
-# System Utilities
 [Flatpak Preinstall com.github.tchx84.Flatseal]
 Branch=stable
 
@@ -112,3 +109,14 @@ IsRuntime=true
 [Flatpak Preinstall org.gtk.Gtk3theme.adw-gtk3-dark]
 Branch=3.22
 IsRuntime=true
+
+# Password Managers
+[Flatpak Preinstall com.bitwarden.desktop]
+Branch=stable
+
+[Flatpak Preinstall org.keepassxc.KeePassXC]
+Branch=stable
+
+# Notes App
+[Flatpak Preinstall md.obsidian.Obsidian]
+Branch=stable

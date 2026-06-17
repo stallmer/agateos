@@ -25,3 +25,7 @@ brew "tmux"       # Terminal multiplexer
 # CLI Email Tools
 brew "aerc"      # CLI email client
 brew "khard"     # CLI contact management
+
+# Editors
+brew "neovim"
+brew "emacs"
