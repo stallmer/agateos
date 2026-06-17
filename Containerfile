@@ -46,7 +46,7 @@ COPY --from=ghcr.io/projectbluefin/common:latest@sha256:b8fe93b16674a547b4cf3849
 COPY --from=ghcr.io/ublue-os/brew:latest@sha256:2eca44f5b4b58b8271a625d61c2c063b7c8776f68d004ae67563e2a79450be9c /system_files /oci/brew
 
 # Base Image - Bluefin (includes GNOME with Bluefin desktop configuration)
-FROM ghcr.io/projectbluefin/bluefin-dx:stable
+FROM ghcr.io/ublue-os/bluefin-dx:stable
 
 # Base Image - GNOME included (Silverblue - pure Fedora)
 # FROM ghcr.io/ublue-os/silverblue-main:latest@sha256:3c0755853e3bd1a7ffe60851bb85a4782c91442566ca7e2aa59f64b496fb4a5d
